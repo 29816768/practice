@@ -41,4 +41,18 @@
         android:text="兼容长按测试"
         />
 
+    <Button
+        android:id="@+id/bt_t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="倒计时"
+        />
+
+    <Button
+        android:id="@+id/bt_t4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="阅读sdk"
+        />
+
 </LinearLayout>

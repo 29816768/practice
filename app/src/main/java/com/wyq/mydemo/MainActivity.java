@@ -2,11 +2,15 @@ package com.wyq.mydemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.cmread.miguread.login.config.MgLoginConfig;
+import com.cmread.migureadsdk.MgReadBasicSdk;
 import com.wyq.annotation_lib.Inject;
 import com.wyq.annotation_lib.annatation_common.OnClickCommon;
 import com.wyq.annotation_lib.annatation_common.OnLongClickCommon;
@@ -28,10 +32,27 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.bt_test3)
     private Button button3;
 
+    @BindView(R.id.bt_t3)
+    private Button time;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Inject.inject(this);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("wyq", "onClick: setOnClickListener");
+            }
+        });
+
+        button3.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Log.d("wyq", "onClick: setOnLongClickListener");
+                return true;
+            }
+        });
     }
 
     //发起网络请求
@@ -50,15 +71,27 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Click(R.id.bt_test3)
+/*    @Click(R.id.bt_test3)
     private void show3() {
         Toast.makeText(this, "show3 is run", Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
     @Click(R.id.bt_test4)
     private void show4() {
         Toast.makeText(this, "show4 is run", Toast.LENGTH_SHORT).show();
     }
+
+    @Click(R.id.bt_t3)
+    private void show5() {
+        startActivity(new Intent(MainActivity.this, TimeActivity.class));
+    }
+    @Click(R.id.bt_t4)
+    private void show6() {
+        MgReadBasicSdk.startMgReadSdkMainPage(MainActivity.this, "", "D0022579",
+                MgLoginConfig.MgCCMMLoginType.MG_CCMM_STANDARD_UP_TOKEN
+            );
+    }
+
 
     @OnClickCommon(R.id.bt_t1) // 点击事件
     private void test1() {

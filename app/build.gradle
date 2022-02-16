@@ -11,7 +11,11 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
-
+        ndk {
+            // 设置支持的 SO 库构架，本程序只加入了armeabi .so文件
+            abiFilters 'armeabi'
+//, 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'//表示.so生成的目录
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -26,8 +30,14 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
@@ -37,6 +47,26 @@ dependencies {
     // net
     implementation 'com.android.volley:volley:1.1.0'
     implementation 'com.google.code.gson:gson:2.2.4'
-    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
     implementation 'org.xutils:xutils:3.3.36'
+
+    //glide
+
+    def GLIDE_VERSION = "4.12.0"
+    // webpdecoder
+    implementation "com.github.zjupure:webpdecoder:2.0.${GLIDE_VERSION}"
+    // glide 4.10.0+
+    implementation "com.github.bumptech.glide:glide:${GLIDE_VERSION}"
+    annotationProcessor "com.github.bumptech.glide:compiler:${GLIDE_VERSION}"
+
+    //1.0.3版本没有amber  1.0.4版本加了amber
+    implementation (name: 'miguread-v-1.2.0-basic', ext: 'aar')
+
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    implementation 'com.alibaba:arouter-api:1.5.0'
+    implementation 'com.alibaba:arouter-annotation:1.0.6'
+    api ("com.airbnb.android:lottie:2.3.1"){
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.google.code.gson:gson:2.8.4'
+
 }

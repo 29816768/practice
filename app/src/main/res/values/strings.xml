@@ -1,3 +1,550 @@
 <resources>
-    <string name="app_name">MyDemo</string>
+<string name="app_name">MyDemo</string>
+<string name="app_id_MSC">5feae654</string>//测试有用的MSC.jar
+<string name="app_id_Msc">51a56c66</string>//现网用的Msc
+<string name="book_reader_exit_remind">提示</string>
+<string name="abstract_addshelfbookmark">是否加入书架？</string>
+<string name="abstract_addshelfbookmark_confirm">是</string>
+<string name="abstract_addshelfbookmark_cancel">否</string>
+<string name="bottom_catalog">目录</string>
+<string name="bottom_day">日间</string>
+<string name="bottom_night"> 夜间</string>
+<string name="bottom_setting">设置</string>
+<string name="bottom_send_barrage">发弹幕</string>
+<string name="bottom_orientation_horizontal">横屏</string>
+<string name="bottom_orientation_vertical">竖屏</string>
+<string name="bottom_comic_play_text">播放</string>
+<string name="bottom_mrc_tip">每一章节末页都可以给作者打赏，给书评论哟～</string>
+<string name="bottom_mrc_tip_know">知道了</string>
+<string name="readonline_comment_text">评论</string>
+<string name="setting_alert_ok">确定</string>
+<string name="setting_alert_cancel">取消</string>
+<string name="reader_display_setting_a_plus">A+</string>
+<string name="reader_display_setting_a_sub">A-</string>
+<string name="reader_page_mode_none">无</string>
+<string name="reader_page_mode_translate">平移</string>
+<string name="reader_page_mode_simulate">仿真</string>
+<string name="reader_page_mode_smooth">滑页</string>
+<string name="reader_page_mode_browse">上下</string>
+<string name="bookreader_font_system">默认</string>
+<string name="bookreader_font_song_dynasty_style">仿宋</string>
+<string name="bookreader_font_printed">楷体</string>
+<string name="bookreader_font_groups">圆体</string>
+<string name="bookreader_display_setting_pagemode">翻页</string>
+<string name="bookreader_display_setting_font">字体</string>
+<string name="bookreader_display_setting_more">更多设置</string>
+<string name="bookreader_font_size">字号</string>
+<string name="bookreader_light">系统亮度</string>
+<string name="light_with_system">系统亮度</string>
+<string name="no_install_text">未装</string>
+<string name="bottom_light_text">亮度</string>
+<string name="chapter_start_tag">第</string>
+<string name="chapter_first_page">首页</string>
+<string name="parsing_chapter">正在解析章节...</string>
+<string name="parsing_chapter_complete">章节解析完成</string>
+<string name="not_support_format">暂不支持图片格式哦~</string>
+<string name="not_support_encrypt">暂不能解析加密文件</string>
+<string name="empty_chapter">该章节内容为空</string>
+<string name="add_to_bookshelf">加入书架</string>
+<string name="add_to_bookshelf_completed">已在书架</string>
+<string name="more_setting">更多设置</string>
+<string name="bottombar_presentbook">赠书</string>
+<string name="bottombar_submitmonthlyticket">月票</string>
+<string name="bottombar_score">评分</string>
+<string name="bottombar_comment">评论</string>
+<string name="bottombar_detail">详情</string>
+<string name="bottom_bar_report">举报章节</string>
+<string name="reader_btn_prev_chapter">上一章</string>
+<string name="reader_btn_next_chapter">下一章</string>
+<string name="bookreader_add_bookmark">添加书签</string>
+<string name="bookreader_delete_bookmark">取消书签</string>
+<string name="bookreader_downloaded">已下载</string>
+<string name="chapterlist_download_button">下载</string>
+<string name="book_detail_give_reward">打赏</string>
+
+<string name="button_delete">删除</string>
+<!-- booknote start -->
+<string name="booknote_edit_title">笔记添加</string>
+<string name="booknote_edit_modify">笔记修改</string>
+<string name="booknote_edit_save">发布</string>
+<string name="booknote_edit_cancel">取消</string>
+<string name="booknote_note_tip">注：</string>
+<string name="booknote_edit_digest">原文</string>
+<string name="booknote_edit_note_hint">写下笔记～不剧透是一种美德^_^ （5-1000个中文字符）</string>
+<string name="booknote_edit_text">编辑</string>
+
+<string name="note_public">所有人可见</string>
+<string name="note_private">仅自己可见</string>
+<string name="note_invalid">输入内容包含违规内容，请修改</string>
+<string name="show_notes">显示笔记</string>
+<string name="hide_notes">隐藏笔记</string>
+<string name="edit_in_reader">请在阅读页进行修改！</string>
+<string name="edit_words_num_limit">字数不低于5个字哦</string>
+<string name="user_in_black_list">暂时不能发表笔记！</string>
+
+<string name="button_share">分享</string>
+<string name="bookreader_share_guide">滑动手指，选取文字</string>
+<string name="share_toolbar_copy">复制</string>
+<string name="text_copy_success">文字复制成功</string>
+<string name="copied_text">复制的内容</string>
+<string name="share_toolbar_addnote">添加笔记</string>
+<string name="continue_read">继续阅读</string>
+<string name="end_read">结束阅读</string>
+<string name="bookreader_img_note_fold">收起图注</string>
+<string name="bookreader_img_note_unfold">展开图注</string>
+<string name="share_toolbar_delete">删除</string>
+<string name="share_toolbar_note">笔记</string>
+<string name="share_toolbar_underline">划线</string>
+<string name="share_toolbar_search">词典</string>
+<string name="tts_first_read_dialog_text">首次使用朗读功能，需要下载本地语音库噢</string>
+<string name="tts_first_read_dialog_ok">下载语音库</string>
+<string name="tts_first_read_dialog_cancel">在线朗读</string>
+<string name="tts_turn_to_local_text">播放失败，使用本地朗读吧</string>
+<string name="tts_wap_connection_remind_text">当前正在使用在线合成声音，请注意流量消耗哦！</string>
+
+<!-- book_reader_related_with_listening -->
+<string name="tts_select_reminder_string">请选择演播方式：</string>
+<string name="default_tts_string">语音朗读</string>
+<string name="high_quality_tts_string">名家演播</string>
+<string name="tts_timer_10minutes">10分钟</string>
+<string name="tts_timer_15minutes">15分钟</string>
+<string name="tts_timer_20minutes">20分钟</string>
+<string name="tts_timer_30minutes">30分钟</string>
+<string name="tts_timer_60minutes">60分钟</string>
+<string name="tts_timer_90minutes">90分钟</string>
+<string name="tts_timer_120minutes">120分钟</string>
+
+<string name="tts_voice_speed_choise">语速</string>
+<string name="tts_voice_speed_slow">  慢</string>
+<string name="tts_voice_speed_rapid">快</string>
+<string name="tts_disconnect_dialog_text">播放失败，请稍后重试~</string>
+
+<string name="tts_menu_land_button_text">"戳我免费听"</string>
+<string name="tts_menu_land_button_short_text">"免费"</string>
+<string name="tts_voice_type_text_series_order">"享有中"</string>
+<string name="tts_voice_type_catalog_type_loading">"订购状态查询中"</string>
+<string name="tts_voice_type_text_unorder">"未订购"</string>
+<string name="tts_voice_type_text_normal">"当前为免费语音包"</string>
+<string name="tts_voice_type_button_unlogin_order">"去订购"</string>
+<string name="tts_voice_type_button_update_smart">"升级高品质"</string>
+<string name="tts_voice_loading">"加载中..."</string>
+<string name="tts_voice_isplaying">退出朗读</string>
+<string name="tts_voice_clicktoplay">点击朗读</string>
+<string name="tts_voice_name_type">普通版</string>
+<string name="tts_voice_name_smart_type">高品质</string>
+<string name="tts_voice_name_starter_type">大明星</string>
+<string name="tts_online_switch_local_tip">您当前网络状况不佳，请到网络状况良好的地方继续听在线发音人朗读。</string>
+<string name="tts_online_switch_copyright_expiration">该主播版权到期，请选择其他人声（11200）</string>>
+<string name="tts_online_switch_local_confirm">知道了</string>
+
+<string name="tts_offline_badge">离线</string>
+<string name="tts_name_local_male">离线男声</string>
+<string name="tts_name_local_female">离线女声</string>
+<string name="tts_name_classic_male">经典男声</string>
+<string name="tts_name_classic_female">经典女声</string>
+<string name="tts_name_local_xiaoai_pure">温柔女声</string>
+<string name="tts_name_local_xiaobin_pure">磁性男声</string>
+<string name="tts_name_online_xiaohong">帅气小宏</string>
+<string name="tts_name_online_xiaoyan">知性小妍</string>
+<string name="tts_name_online_guangdong">广东话</string>
+<string name="tts_name_online_sichuan">四川话</string>
+<string name="tts_name_online_xiaozhou1">小周1</string>
+<string name="tts_name_online_xiaozhou2">小周2</string>
+
+<string name="tts_name_smart_xiaofeng">晓峰</string>
+<string name="tts_name_smart_xiaoyan">小妍</string>
+<string name="tts_name_smart_dahuilang">大灰狼</string>
+<string name="tts_name_smart_nuouo">诺诺</string>
+<string name="tts_name_smart_yuanye">原野</string>
+<string name="tts_name_smart_minge">行简</string>
+<string name="tts_name_smart_qianxue">慕七</string>
+<string name="tts_name_smart_baihuaxianzi">百花仙子</string>
+<string name="tts_name_smart_weixiangzhu">韦香主</string>
+<string name="tts_name_smart_xiaoyaozi">逍遥子</string>
+<string name="tts_name_starter_wangguan_standard">王冠标准</string>
+<string name="tts_name_starter_wangguan">王冠</string>
+<string name="tts_name_starter_lichun_standard">黎春标准</string>
+<string name="tts_name_starter_lichun">黎春</string>
+<string name="tts_name_starter_geyou">葛大爷</string>
+<string name="tts_name_starter_chuchu">楚楚</string>
+<string name="tts_name_starter_liyitong">SNH48</string>
+<string name="tts_name_starter_liyitong_standard">SNH48标准</string>
+<string name="tts_local_male_description">"不疾不徐"</string>
+<string name="tts_local_female_description">"娓娓道来"</string>
+<string name="tts_online_xiaohong_description">饱满有劲</string>
+<string name="tts_online_xiaoyan_description">突破次元</string>
+<string name="tts_online_guangdong_description">猴塞雷～</string>
+<string name="tts_online_sichuan_description">摆龙门阵</string>
+<string name="tts_smart_dahuilang_description">成熟大叔</string>
+<string name="tts_smart_nuouo_description">温婉御姐</string>
+<string name="tts_smart_yuanye_description"> 说书大叔</string>
+<string name="tts_smart_baihuaxianzi_description">清丽淑女</string>
+<string name="tts_smart_weixiangzhu_description">魅力小哥</string>
+<string name="tts_smart_xiaoyaozi_description">风雅青叔</string>
+<string name="tts_starter_geyou_description">京味大爷</string>
+<string name="tts_starter_chuchu_description"></string>
+<string name="tts_starter_liyitong_description">甜美偶像</string>
+<string name="tts_starter_wangguan_description">央广男主持</string>
+<string name="tts_starter_lichun_description">央广女主持</string>
+
+<!-- book_bttom_mrc start -->
+<string name="book_bottom_mrc_ticket">月票</string>
+<string name="book_bottom_mrc_reward">打赏</string>
+<string name="book_bottom_mrc_comment">评论</string>
+<string name="book_bottom_mrc_note">笔记</string>
+<!-- book_bttom_mrc end -->
+<string name="bookreader_pic_share_text">分享</string>
+<string name="readonline_mark_text">评分</string>
+
+<string name="loading_chapter">目录加载中...</string>
+<string name="listen_time_setting_title">定时关闭设置</string>
+<string name="stop_timer">关闭定时</string>
+
+<string name="tts_timer">定时</string>
+<string name="tts_timer_close">定时关闭</string>
+<string name="tts_online_voice_disconnect_toast">播放失败，将使用本地朗读</string>
+<string name="book_not_support_tts">本书暂不支持语音朗读</string>
+<string name="tts_local_res_not_found">请先下载本地朗读语音库</string>
+<string name="tts_connect_tip">播放失败，请稍后重试</string>
+<string name="tts_connect_retry">重试</string>
+<string name="tts_connect_cancle">取消</string>
+<string name="tts_novel_type">图书</string>
+
+<string name="migu_read_network_error_hint">请求失败，请稍后重试</string>
+
+<!--    -->
+<string name="no_speaker_available_text">暂时没有发音人</string>
+<string name="free_speaker_label_text">免流量</string>
+<string name="ordered_speaker_label_text">已购买</string>
+<string name="tts_error">语音合成失败,错误码</string>
+<string name="tts_speaker_loading_view_text">正在加载</string>
+<string name="free_voice_tab_text">畅享音质</string>
+<string name="personal_voice_tab_text">个性音质</string>
+<string name="tts_smart_role_subcribe_tip">您本月已经试听完30分钟的高品质朗读包语音库，您可以直接订购ta的语音包，让ta为您朗读全站书籍！</string>
+<string name="tts_starter_geyou_subcribe_tip">您本月已经试听完30分钟的葛大爷朗读包语音库，您可以直接订购ta的语音包，让葛大爷为您朗读全站书籍！</string>
+<string name="tts_starter_chuchu_subcribe_tip">您本月已经试听完30分钟的楚楚朗读包语音库，您可以直接订购ta的语音包，让楚楚为您朗读全站书籍！</string>
+<string name="tts_starter_liyitong_subcribe_tip">您本月已经试听完30分钟的SNH48李艺彤朗读包语音库，您可以直接订购ta的语音包，让SNH48李艺彤为您朗读全站书籍！</string>
+<string name="tts_starter_wangguan_subcribe_tip">您本月已经试听完30分钟的王冠朗读包语音库，您可以直接订购ta的语音包，让王冠为您朗读全站书籍！</string>
+<string name="tts_starter_lichun_subcribe_tip">您本月已经试听完30分钟的黎春朗读包语音库，您可以直接订购ta的语音包，让黎春为您朗读全站书籍！</string>
+
+<string name="tts_smart_role_preview_dialog_tip">您已经试听过高品质音库，您可以直接订购高品质朗读包，畅听全站书籍！</string>
+<string name="tts_starter_geyou_preview_dialog_tip">您已经试听过葛大爷朗读包音库，您可以直接订购ta的语音包，让葛大爷为您朗读全站书籍！</string>
+<string name="tts_starter_chuchu_preview_dialog_tip">您已经试听过楚楚朗读包音库，您可以直接订购ta的语音包，让楚楚为您朗读全站书籍！</string>
+<string name="tts_starter_liyitong_preview_dialog_tip">您已经试听过SNH48李艺彤朗读包音库，您可以直接订购ta的语音包，让SNH48李艺彤为您朗读全站书籍！</string>
+<string name="tts_starter_wangguan_preview_dialog_tip">您已经试听过王冠朗读包音库，您可以直接订购ta的语音包，让王冠为您朗读全站书籍！</string>
+<string name="tts_starter_lichun_preview_dialog_tip">您已经试听过黎春朗读包音库，您可以直接订购ta的语音包，让黎春为您朗读全站书籍！</string>
+
+<string name="tts_turnto_common_role">切换优质版</string>
+<string name="tts_preview_continue">继续试听</string>
+<string name="tts_subscribe_smart">去订购</string>
+<string name="tts_turn_to_default_role_authen_error">高品质语音播放失败，请稍后重试($)</string>
+<string name="tts_geyou_to_default_role_authen_error">葛大爷语音播放失败，请稍后重试($)</string>
+<string name="tts_chuchu_to_default_role_authen_error">楚楚语音播放失败，请稍后重试($)</string>
+<string name="tts_liyitong_to_default_role_authen_error">SNH48李艺彤语音播放失败，请稍后重试($)</string>
+<string name="tts_wangguan_to_default_role_authen_error">王冠语音播放失败，请稍后重试($)</string>
+<string name="tts_lichun_to_default_role_authen_error">黎春语音播放失败，请稍后重试($)</string>
+<string name="tts_authen_subcribe_success">您已是会员用户，请畅享高品质语音朗读</string>
+<string name="tts_liyitong_authen_subcribe_success">您已是会员用户，请畅享SNH48李艺彤语音朗读</string>
+<string name="tts_chuchu_authen_subcribe_success">您已是会员用户，请畅享楚楚语音朗读</string>
+<string name="tts_geyou_authen_subcribe_success">您已是会员用户，请畅享葛大爷语音朗读</string>
+<string name="tts_wangguan_authen_subcribe_success">您已是会员用户，请畅享王冠语音朗读</string>
+<string name="tts_lichun_authen_subcribe_success">您已是会员用户，请畅享黎春语音朗读</string>
+<string name="tts_catalog_subcribe_fail">开通会员失败，已为您切换为优质人声朗读</string>
+<string name="tts_login_fail">您未登录，已为您切换为优质人声朗读</string>
+
+<string name="sdcard_improper_remove">SD卡非正常移除</string>
+<string name="bookreader_format_error">解析失败</string>
+<string name="loading_inprocess">读取中，请稍候…</string>
+<string name="download_complete_file_lost_alert_msg">没有找到本书，请检查存储卡或重新下载！</string>
+<string name="image_format_error">图片格式错误，请重新选择</string>
+<string name="pic_share_save_to_local_success">图片成功保存到本地</string>
+<string name="pic_share_save_to_local_failed">图片保存到本地失败</string>
+<string name="pic_share_button_share_text">分享</string>
+<string name="pic_share_bookreader_copy_bookname">图书:</string>
+<string name="pic_share_bookreader_copy_authorname">作者:</string>
+<string name="pic_share_bookreader_copy_origin">来源:</string>
+<string name="no_download_chapter">暂无可下载章节</string>
+
+<string name="loading_data">正在加载...</string>
+<string name="share_hint_text">分享编辑模式</string>
+<string name="bookreader_fascicle_reach_head">已到达本分册首页</string>
+<string name="bookreader_reach_head">不能再往上翻啦</string>
+<string name="bookreader_reach_end">翻到最后一页啦</string>
+<string name="bookreader_reach_last_chapter">翻到最后一章啦</string>
+<string name="bookreader_reach_cover">不能再往上翻啦</string>
+<string name="bookreader_fascile_reach_end">已到达本分册末页</string>
+<string name="abstract_contentlist">目录</string>
+<string name="readoneline_menu_bookmark">书签</string>
+<string name="readoneline_menu_booknote">笔记</string>
+<string name="download_notenough_space">空间不足，请修改存储位置或删除部分文件</string>
+
+<string name="add_booknote_fail">笔记保存失败</string>
+<string name="delete_booknote_fail">笔记删除失败</string>
+<string name="edit_booknote_fail">笔记编辑失败</string>
+<string name="add_bookmark_fail">书签添加失败</string>
+<string name="delete_bookmark_fail">书签删除失败</string>
+<string name="bookmark_reach_limit">书签达上限提示</string>
+<string name="bookmark_reach_limit_confirm">知道了</string>
+<string name="positive">是</string>
+<string name="negative">否</string>
+<string name="tip">提示</string>
+<string name="bookmark_reach_limit_tip">该图书书签上传云端已达上限，自动将您较早添加的书签删除，仅保留最新的100条书签。</string>
+<string name="bookmark_connect_wifi">打开云端书签需联网操作，是否连接网络？</string>
+<string name="booknote_connect_wifi">打开云端笔记需联网操作，是否连接网络？</string>
+
+<string name="readlocal_confirm">是</string>
+<string name="readlocal_cancel">否</string>
+<string name="readlocal_first_chapter">请求失败，是否从本地第一章开始阅读？</string>
+<string name="preset_book_full_downloaded">您已经下载完所有章节，可返回书架阅读</string>
+<string name="whole_listening_chapter_downloaded">您已经下载所有章节，可返回书架阅读</string>
+<!-- end by jinxusheng BR000622 -->
+<!-- start by zhanglianchen BR001313 -->
+<string name="settingpref_back_read">退出阅读提醒加入书架</string>
+<string name="like_book_add_booksheft">喜欢就加入书架吧</string>
+<!-- end by zhanglianchen BR001313 -->
+
+<string name="button_confirm">确定</string>
+<string name="button_cancel">取消</string>
+<!-- for BR001319  bookreader progress-->
+<string name="bookreader_catalog_name">卷</string>
+<string name="bookreader_fetching_catalog_reminder">目录加载中，请稍后再试</string>
+
+<string name="reserve_upgrade_success">预约成功，章节更新会马上通知您哦</string>
+<string name="reserve_upgrade_close">本书更新提醒已关闭</string>
+
+<string name="ad_reader_remove_ad">去广告畅读</string>
+<string name="ad_reader_continue">左滑继续阅读</string>
+<string name="ad_spread_reminder_divider">:</string>
+<string name="ad_btn_download">下载应用</string>
+<string name="ad_btn_detail">查看详情</string>
+<string name="select_too_much">你选的太多啦</string>
+<string name="can_not_select_previous_page">章节开始不能再选啦</string>
+<string name="can_not_select_next_page">章节末不能再选啦</string>
+<string name="ad_rest">休息一下</string>
+
+<string name="format_error">数据格式错误</string>
+<string name="pic_share_appname_text">咪咕阅读</string>
+<string name="book_downloading_start">成功添加下载任务，到书架查看哦</string>
+<string name="tts_voice_upgrade">升级</string>
+<string name="tts_voice_upgrade_cancel">取消</string>
+<string name="tts_voice_upgrade_title">更新提醒</string>
+<string name="tts_voice_upgrade_msg">语音朗读更新了，朗读更赞了</string>
+<string name="tts_subscribe_tips">即将播放付费内容，快来解锁更多精彩吧</string>
+<string name="tts_play_end">内容已播放完毕，去看看其它吧</string>
+<string name="getting_the_catalog_please_wait_a_minute">正在获取目录，请稍等哦~~</string>
+<string name="tts_play_failed_by_off_bookshelf">哎呀，书已下架无法阅读，换一本吧</string>
+
+<string name="button_retry">重 试</string>
+<string name="book_downloading">已下载，请到书架中查看</string>
+<string name="push_switch_change_fialed">修改失败</string>
+<string name="push_switch_state_fialed">开关状态获取失败</string>
+<string name="push_switch_default_fialed">推送开关选项恢复失败</string>
+<string name="user_reserve_support_max">预定更新已达最大值</string>
+<string name="boutique_reserve_failed">订购失败，请稍候重试</string>
+
+<string name = "permission_dialog_positive_button">马上设置</string>
+<string name = "permission_dialog_negative_button">取消</string>
+<string name = "permission_dialog_title">权限提醒</string>
+<string name = "permission_dialog_message_base_permission">“存储权限”和“电话权限”是软件提供优质服务的基础权限，不会涉及访问个人隐私，请允许访问。</string>
+<string name = "permission_dialog_go_setting_now">马上设置</string>
+
+<string name="note_manager_delete_success3">已删除</string>
+
+
+<!-- eye protection toast start -->
+<string name="eye_protection_open">开启护眼</string>
+<string name="eye_protection_close">关闭护眼</string>
+<!-- eye protection end -->
+<string name = "permission_dialog_message_alert_window_permission">悬浮框</string>
+
+<string name="pull_add_bookmark">下拉可以添加书签</string>
+<string name="loosen_add_bookmark">松开可以添加书签</string>
+<string name="pull_delete_bookmark">下拉可以删除书签</string>
+<string name="loosen_delete_bookmark">松开可以删除书签</string>
+
+<string name="xlistview_header_hint_normal">下拉刷新</string>
+<string name="xlistview_header_hint_ready">松开刷新数据</string>
+<string name="xlistview_header_hint_loading">正在加载，请稍候...</string>
+<string name="xlistview_header_last_time">上次更新时间：</string>
+<string name="xlistview_footer_hint_normal">松开载入更多</string>
+<string name="xlistview_footer_hint_ready">松开载入更多</string>
+<string name="xlistview_footer_hint_no_more">暂无更新章节</string>
+<string name="xlistview_footer_hint_complete">本书已完结</string>
+<string name="eyeprotect_settingpref_default">恢复护眼默认值</string>
+
+<string name="settingpref_default">恢复默认设置</string>
+<string name="settingpref_screenOffTimeout_title">屏幕关闭时间</string>
+<string name="settingpref_eye_protection_title">护眼模式</string>
+<string name="settingpref_eye_protection_switch">开启护眼模式</string>
+<string name="settingpref_eye_protection_color">过滤器颜色</string>
+<string name="settingpref_eye_protection_blue_filter">有害光过滤比例</string>
+<string name="settingpref_eye_protection_brightness">背光减弱强度</string>
+<string name="settinglistenbook_download_title">选择下载音质</string>
+
+<string name="open_file_fail">打开文件失败 </string>
+<string name="open_empty_file">文件内容为空，请检查文件大小</string>
+<string name="note_issue_success_no_share">笔记保存成功</string>
+<string name="more_chapter">更多章节</string>
+<string name="free_reminder_text">免费</string>
+
+<string name="book_is_finished">图书已完结</string>
+
+<string name="book_reader_ad_download_remind">下载可能产生流量，建议WIFI下载，是否继续下载?</string>
+<string name="book_reader_ad_remind_yes">是</string>
+<string name="book_reader_ad_remind_no">否</string>
+
+
+<string name="book_note_string0">0</string>
+<string name="book_note_string_1">-1</string>
+<string name="book_note_string_2">-2</string>
+<string name="write_book_note">写下你的笔记...</string>
+<string name="para_end_empty_note_default">喜欢就夸一下，不喜欢就吐槽一下吧~</string>
+<string name="book_note_empty">暂时没有公开笔记</string>
+<string name="book_note_copy_toast">复制笔记成功</string>
+<string name="book_para_note_empty">没有更多笔记啦</string>
+
+<string name="reader_display_setting_font">更换字体</string>
+
+<string name="reader_setting_auto_flip">自动阅读</string>
+<string name="reader_setting_space">间距设置</string>
+
+<string name="toast_book_downloading">下载中，请到书架中查看</string>
+<string name="menu_item_book_download_resume">继续下载</string>
+
+<string name="reader_migu_ai">咪咕AI</string>
+<string name="ai_assistant">咪咕AI助手</string>
+<string name="ai_microphone_permission_1">我需要麦克风权限才能</string>
+<string name="ai_microphone_permission_2">为您服务哦</string>
+<string name="ai_microphone_denial">残忍拒绝</string>
+<string name="ai_microphone_setting">去设置</string>
+<string name="ai_insert_headset">请插入耳机</string>
+<string name="ai_wakeup_me">说出“咪咕咪咕”叫醒我</string>
+<string name="ai_wakeup_me_earphone">“咪咕咪咕”叫醒我吧</string>
+<string name="ai_talk_to_earphone">对着耳机说出</string>
+<string name="ai_microphone_insertion_1">戴上有麦克风的耳机</string>
+<string name="ai_microphone_insertion_2">我才听得到你哦~</string>
+<string name="ai_microphone_insertion_ok">我知道啦</string>
+<string name="ai_ui_i_gotta">知道了</string>
+<string name="ai_help_tip">我是咪咕AI，我可以帮您：</string>
+<string name="ai_help_increase_volume">增大音量，请说“大声”、“大点声”</string>
+<string name="ai_help_decrease_volume">减小音量，请说“小声”、“小点声”</string>
+<string name="ai_help_stop">停止播放，请说“退出”、“停止”</string>
+<string name="ai_help_exit">退出助手，请说“咪咕再见”</string>
+<string name="ai_help_mic_warning">开启AI助手后，部分机型可能提示“咪咕阅读正在录音”，不要紧张哦~</string>
+<string name="ai_help_lingxi_support">（灵犀云提供技术支持）</string>
+<string name="ai_wake_up_error">抱歉，您当前系统不支持使用AI助手</string>
+<string name="ai_record_error">请确保录音权限已开启</string>
+<string name="do_not_show_again">下次不再提醒</string>
+
+<string name="correct_content">纠错</string>
+<string name="content_error_1">错别字</string>
+<string name="content_error_2">章节错乱</string>
+<string name="content_error_3">内容缺失</string>
+<string name="content_error_4">图片缺失或错误</string>
+<string name="content_error_5">排版混乱</string>
+<string name="content_error_6">标题与内容不符</string>
+<string name="content_error_7">广告乱码</string>
+<string name="content_error_8">其他</string>
+<string name="content_error_8_desc">可填写错误描述</string>
+<string name="report_error">提交</string>
+<string name="succeeded_to_report">问题反馈成功</string>
+<string name="failed_to_report">提交失败啦~稍后再试试</string>
+<string name="failed_to_report_parameter_error">请输入有效的举报内容</string>
+<string name="content_resemblance">内容雷同</string>
+<string name="content_core">黄暴涉政</string>
+
+<string name="error_edit_caption">纠错信息描述</string>
+<string name="report_edit_caption">举报信息描述</string>
+<string name="error_edit_hint">请输入您发现的问题</string>
+<string name="report_edit_hint">请写下具体的举报理由（如内容与之雷同的具体书名等），字数请控制在50字以内</string>
+<string name="meb_broken_down">您下载的书籍文件已损坏，请删除后重新下载</string>
+
+<string name="book_note_reply_content_empty">回复的内容不能为空</string>
+<string name="book_note_reply_content_hint">回复的内容长度不能超过100</string>
+<string name="reader_book_note_reply_content_hint">回复的内容长度不能超过1000</string>
+<string name="book_note_detail_delete_content">确定要删除该条评论?</string>
+<string name="book_note_reply_delete_success">回复删除成功</string>
+<string name="book_note_delete_success">笔记删除成功</string>
+<string name="book_note_dialog_load_more_reply">查看更多回复</string>
+<string name="book_note_detail_load_more_reply">展开更多回复</string>
+<string name="book_note_dialog_pick_up_reply">收起全部回复</string>
+<string name="book_note_dialog_reply_delete_text">删除</string>
+<string name="book_note_dialog_reply_success">笔记回复成功</string>
+<string name="book_note_dialog_reply_successful">回复成功</string>
+<string name="book_note_dialog_add_note_successful">笔记提交成功</string>
+<string name="book_note_dialog_private_note_hint">私有笔记不支持回复哦！</string>
+<string name="book_note_reply_error_hint">输入内容包含违规内容，请修改</string>
+<string name="book_note_reply_content_limit_5">至少输入5个字符哦！</string>
+<string name="book_note_reply_operation_reply">回复</string>
+<string name="book_note_reply_operation_delete">删除</string>
+<string name="book_note_reply_operation_copy">复制</string>
+<string name="book_note_reply_operation_detail">笔记详情</string>
+
+
+<string name="tts_tip">眼睛休息一下，让我读给你听</string>
+
+<string name="dialog_visitor_to_login_title">温馨提示</string>
+<string name="dialog_visitor_to_login_negative">取消</string>
+<string name="dialog_visitor_to_login_positive">去登录</string>
+
+<string name="video_quality_low">极速</string>
+<string name="video_quality_medium">标清</string>
+<string name="video_quality_high">高清</string>
+<string name="video_quality_4K">4K超高清</string>
+
+<string name="mcn_id_video_not_supported">当前版本暂不支持该视频格式</string>
+
+<string name="off_shelves_msg_def">本书即将下架，请尽快阅读</string>
+<string name="off_shelves_msg_close">×</string>
+<string name="book_reader_move_ad_text">去广告</string>
+<string name="book_reader_bottom_ad_bitmap_text">听有趣、阅不同，精彩尽在咪咕阅读</string>
+<string name="book_reader_ad_move_text">去广告畅读</string>
+<string name="book_reader_ad_show_ad_detail">查看详情</string>
+<string name="book_reader_ad_continue_read">左滑继续阅读</string>
+
+<string name="failed_to_play_video">视频播放失败</string>
+<string name="question_cancel">取消</string>
+<string name="question_send">发布提问</string>
+<string name="question_hint_txt">请输入您的问题，建议以问号结尾（5~256字）</string>
+<string name="question_limits_toast">提问内容不能少于5个字哦~</string>
+<string name="question_retention_page_info">千载难逢的提问机会，要放弃吗？</string>
+<string name="question_retention_page_still_quit">放弃</string>
+<string name="question_retention_page_continue">继续提问</string>
+<string name="question_success">提问成功</string>
+<string name="question_raise">我要提问</string>
+
+<string name="note_reply_already_copy">已复制</string>
+<string name="black_list_book_add_note_text">本书暂不支持发表公开笔记，笔记内容仅自己可见噢~</string>
+
+<string name="reader_ad_example_text">是</string>
+<string name="reader_book_note_all_text">全文</string>
+<string name="tts_listen_book_chapter_title_name">播放目录</string>
+<string name="tts_listen_book_speed_change_title_name">语速调整</string>
+<string name="tts_listen_book_boy_speak">AI男生</string>
+<string name="tts_listen_book_change_person_speak">真人演播</string>
+<string name="tts_listen_book_change_person_speak_new">切换至真人演播</string>
+<string name="tts_listen_book_original_text">看原文</string>
+<string name="tts_listen_book_book_info_author">作者</string>
+<string name="tts_listen_book_guess_you_like">猜你喜欢</string>
+<string name="tts_listen_book_recommend">听过还听</string>
+<string name="tts_listen_book_speed_slow">慢</string>
+<string name="tts_listen_book_info_desc">简介：</string>
+<string name="tts_listen_book_timer_close">不开启</string>
+<string name="tts_listen_book_data_load_failed">数据加载失败</string>
+<string name="tts_listen_book_chapter_load_failed">TTS 章节加载失败</string>
+<string name="tts_listen_book_add_bookshelf">加书架</string>
+<string name="tts_listen_book_not_support_tts">本书暂不支持AI朗读</string>
+<string name="tts_listen_book_change_speak_person">更换发音人</string>
+<string name="tts_listen_book_high_quality">高品质免费听</string>
+<string name="tts_listen_book_finish_chapter_order">请先完成章节订购</string>
+<string name="tts_listen_book_speaker_title">发音人</string>
+<string name="tts_listen_book_change_person_title">听真人演播</string>
+<string name="tts_xtts_change_new_voice">已为你切换全新音质</string>
+<string name="tts_xtts_offline_try_listen">可离线听</string>
+
+<string name="load_failed_try">加载异常，请重试</string>
+<string name="offline_network_content">请检查网络设置，确认网络配置正确</string>
+<string name="net_work_is_unuse">当前网络不可用,检查网络设置</string>
+<string name="bottom_navigation_subscribe_text">订购</string>
+<string name="batchdownload_adapter_ordered">已订购</string>
 </resources>
