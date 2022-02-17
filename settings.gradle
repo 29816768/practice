@@ -12,3 +12,4 @@
 rootProject.name = "MyDemo"
 include ':app'
 include ':ioc_annotation_lib'
+include ':startup'
