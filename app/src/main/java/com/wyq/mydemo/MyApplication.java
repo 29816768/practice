@@ -2,6 +2,8 @@ package com.wyq.mydemo;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
+import android.os.Trace;
 import android.util.Log;
 
 import com.cmread.mgprotocol.MiguModuleServiceManager;
@@ -25,6 +27,12 @@ import com.wyq.startup.tasks.Task5;
  * Description:
  */
 public class MyApplication extends Application {
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();

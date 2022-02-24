@@ -25,21 +25,22 @@
         <activity
             android:name="com.wyq.mydemo.TimeActivity"
             android:screenOrientation="landscape" />
+        <activity android:name="com.wyq.mydemo.DrawableActivity" />
 
-        <provider
-            android:name="com.wyq.startup.provider.StartupProvider"
-            android:authorities="${applicationId}.android_startup"
-            android:exported="false">
+        <!--        <provider
+                    android:name="com.wyq.startup.provider.StartupProvider"
+                    android:authorities="${applicationId}.android_startup"
+                    android:exported="false">
 
-            <meta-data
-                android:name="com.wyq.startup.tasks.Task5"
-                android:value="android.startup" />
-        </provider>
+                    <meta-data
+                        android:name="com.wyq.startup.tasks.Task5"
+                        android:value="android.startup" />
+                </provider>
 
-        <provider
-            android:name="com.wyq.startup.provider.SDKProvider"
-            android:authorities="com.enjoy.lib.SDKProvider.sdk"
-            tools:node="remove" />
+                <provider
+                    android:name="com.wyq.startup.provider.SDKProvider"
+                    android:authorities="com.enjoy.lib.SDKProvider.sdk"
+                    tools:node="remove" />-->
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

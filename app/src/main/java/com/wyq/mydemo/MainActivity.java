@@ -1,10 +1,11 @@
 package com.wyq.mydemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Debug;
+import android.os.Trace;
 import android.util.Log;
+import android.view.Choreographer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -20,9 +21,13 @@ import com.wyq.annotation_lib.annotation.ContentView;
 import com.wyq.mydemo.http.HttpCallback;
 import com.wyq.mydemo.http.HttpHelper;
 import com.wyq.mydemo.http.ResponseData;
-import com.wyq.startup.manage.StartupManager;
+import com.wyq.mydemo.proxy.Api;
+import com.wyq.mydemo.proxy.ApiImpl;
+import com.wyq.mydemo.proxy.ApiProxy;
 
 import java.util.HashMap;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 @ContentView(R.layout.activity_main)
 public class MainActivity extends AppCompatActivity {
@@ -39,8 +44,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //x2c  不支持appcompat，兼容性的问题
+        //AsyncLayoutInflater 异步加载布局 不能有fragment不支持
+        //systrace的使用  Frame alert 时间分片 app里的CPU+ GPU
+        //正式环境只能反射setAppTracingAllowed 置为true来使用
+        Trace.beginSection("Inject_inject");
         Inject.inject(this);
-        button3.setOnClickListener(new View.OnClickListener() {
+        Trace.endSection();
+        findViewById(R.id.bt_test3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("wyq", "onClick: setOnClickListener");
@@ -54,6 +65,16 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        final long starTime=System.nanoTime();
+
+        Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() {
+            @Override
+            public void doFrame(long frameTimeNanos) {
+                Log.e("wyqqq","starTime="+starTime+", frameTimeNanos="+frameTimeNanos
+                        + ", frameDueTime="+(frameTimeNanos-starTime)/1000000);
+            }
+        });
+
     }
 
     //发起网络请求
@@ -72,11 +93,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-/*    @Click(R.id.bt_test3)
-    private void show3() {
-        Toast.makeText(this, "show3 is run", Toast.LENGTH_SHORT).show();
-    }*/
-
     @Click(R.id.bt_test4)
     private void show4() {
         Toast.makeText(this, "show4 is run", Toast.LENGTH_SHORT).show();
@@ -86,11 +102,36 @@ public class MainActivity extends AppCompatActivity {
     private void show5() {
         startActivity(new Intent(MainActivity.this, TimeActivity.class));
     }
+
     @Click(R.id.bt_t4)
     private void show6() {
         MgReadBasicSdk.startMgReadSdkMainPage(MainActivity.this, "", "D0022579",
                 MgLoginConfig.MgCCMMLoginType.MG_CCMM_STANDARD_UP_TOKEN
-            );
+        );
+    }
+
+    @Click(R.id.bt_t5)
+    private void show7() {
+        //ApiImpl api = new ApiImpl();
+        Debug.startMethodTracing();
+        Api imp = new ApiImpl();
+        Api monitor = new ApiProxy(imp);
+        monitor.test("代理类");
+//        Proxy.newProxyInstance(getClass().getClassLoader(),
+//                new Class[]{Api.class},
+//                new InvocationHandler() {
+//            @Override
+//            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+//                //执行真实对象方法
+//                return method.invoke(api, args);
+//            }
+//        });
+    }
+    @Click(R.id.bt_t6)
+    private void show8() {
+        Intent intent = new Intent();
+        intent.setClass(this,DrawableActivity.class);
+        startActivity(intent);
     }
 
 

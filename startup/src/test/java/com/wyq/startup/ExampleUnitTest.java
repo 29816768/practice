@@ -12,19 +12,23 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
-        System.out.print("value=== \n"+getvalue(2) );
+        int[] nums = {1,2,3,4,5,6,7,8};
+        System.out.print("value==="+getvalue(nums, 5) + "\n");
     }
 
-    private int getvalue(int i) {
-        int resule = 0;
-        switch (i){
-            case 1:
-                resule = resule+ i ;
-            case 2:
-                resule = resule+ i*2 ;
-            case 3:
-                resule = resule+ i*3 ;
+    private int getvalue(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;              //7
+        while (left <= right) {
+            int mid = left + (right - left) / 2;  //3
+            if (nums[mid] == target) {            //4
+                return mid;
+            } else if (nums[mid] < target) {      //
+                left = mid + 1;                   //left = 4  [mid + 1, right]
+            } else if (nums[mid] > target) {      //[left, mid - 1]
+                right = mid - 1;
+            }
         }
-        return resule;
+        return -1;
     }
 }

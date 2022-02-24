@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'kotlin-android'
 }
 
 android {
@@ -14,7 +15,6 @@ android {
         ndk {
             // 设置支持的 SO 库构架，本程序只加入了armeabi .so文件
             abiFilters 'armeabi'
-//, 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'//表示.so生成的目录
         }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,6 +29,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    viewBinding {
+        enabled = true
+    }
 }
 repositories {
     flatDir {
@@ -38,9 +42,8 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation project(path: ':ioc_annotation_lib')
     implementation project(path: ':startup')
@@ -69,5 +72,10 @@ dependencies {
         exclude group: 'com.android.support'
     }
     implementation 'com.google.code.gson:gson:2.8.4'
+
+    //blockcanary 卡顿监测
+    //debugImplementation 'com.github.markzhai:blockcanary-android:1.5.0'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
 }
