@@ -181,7 +181,7 @@ public class Inject {
                             new InvocationHandler() {
                                 @Override
                                 public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                                    return declaredMethod.invoke(activity, (Object) null);
+                                    return declaredMethod.invoke(activity, (Object[]) null);
                                 }
                             });
 

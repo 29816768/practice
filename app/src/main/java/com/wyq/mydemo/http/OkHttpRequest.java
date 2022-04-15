@@ -1,10 +1,13 @@
 package com.wyq.mydemo.http;
 
+import android.os.Environment;
 import android.os.Handler;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
+import okhttp3.Cache;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
@@ -24,7 +27,8 @@ public class OkHttpRequest implements IHttpRequest {
     private Handler myHandler; // 此Handler是为了切换到主线程用的，处理成果
 
     public OkHttpRequest() {
-        mOkHttpClient = new OkHttpClient();
+        Cache cache = new Cache(new File(Environment.getExternalStorageDirectory() + "/okhttp_cache/"), 100 * 1024 * 1024);
+        mOkHttpClient = new OkHttpClient.Builder().cache(cache).build();
         myHandler = new Handler();
     }
 

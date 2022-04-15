@@ -23,9 +23,9 @@
         </activity>
 
         <activity
-            android:name="com.wyq.mydemo.TimeActivity"
+            android:name="com.wyq.mydemo.activity.TimeActivity"
             android:screenOrientation="landscape" />
-        <activity android:name="com.wyq.mydemo.DrawableActivity" />
+        <activity android:name="com.wyq.mydemo.activity.DrawableActivity" />
 
         <!--        <provider
                     android:name="com.wyq.startup.provider.StartupProvider"

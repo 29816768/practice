@@ -1,25 +1,17 @@
 package com.wyq.mydemo;
 
-import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
-import android.os.Trace;
-import android.util.Log;
+import android.view.Choreographer;
 
-import com.cmread.mgprotocol.MiguModuleServiceManager;
-import com.cmread.miguread_lite.base.MgReadSDK;
-import com.cmread.miguread_utils.base.MgReadSdkConfig;
-import com.cmread.miguread_utils.common.route.IMgReadCallBack;
+import com.tencent.matrix.Matrix;
+import com.tencent.matrix.iocanary.IOCanaryPlugin;
+import com.tencent.matrix.iocanary.config.IOConfig;
 import com.wyq.mydemo.http.HttpHelper;
-import com.wyq.mydemo.http.OkHttpRequest;
 import com.wyq.mydemo.http.VolleyRequest;
-import com.wyq.mydemo.http.XUtilsRequest;
-import com.wyq.startup.manage.StartupManager;
-import com.wyq.startup.tasks.Task1;
-import com.wyq.startup.tasks.Task2;
-import com.wyq.startup.tasks.Task3;
-import com.wyq.startup.tasks.Task4;
-import com.wyq.startup.tasks.Task5;
+import com.wyq.mydemo.matrix.DynamicConfigImpDemo;
+import com.wyq.mydemo.matrix.TestPluginListener;
+import com.wyq.mydemo.util.FPSFrameCallback;
 
 /**
  * Author: wangyongqi
@@ -29,16 +21,19 @@ import com.wyq.startup.tasks.Task5;
 public class MyApplication extends Application {
 
     @Override
-    protected void attachBaseContext(Context base) {
+    protected  void attachBaseContext(Context base) {
         super.attachBaseContext(base);
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
+        //用来计算丢帧情况
+        Choreographer.getInstance().postFrameCallback(new FPSFrameCallback(System.nanoTime()));
+
         initNetworkLib();
 
-        initReadSDK();
+        initMetrix();
 
 //        new Task1().create(MyApplication.this);
 //        new Task2().create(MyApplication.this);
@@ -56,36 +51,22 @@ public class MyApplication extends Application {
 //                .start().await();
     }
 
-    private void initReadSDK() {
-        MgReadSdkConfig mgReadSdkConfig = new MgReadSdkConfig();
-        mgReadSdkConfig.setAndroidXFlag(-1);
-        mgReadSdkConfig.setShouldInitAmber(false);
-        mgReadSdkConfig.setAppScrect("8175674795fc4b619c367b1c1d3b72fa");
-        mgReadSdkConfig.setAppKey("MGSP");
-        MgReadSDK.initMgReadSdk(this, "D0022335", mgReadSdkConfig);
-        MgReadSDK.setMgReadSdkCallBack(new IMgReadCallBack() {
-            @Override
-            public void startLogin(Activity activity) {
-                //MiguYijiSdkTokenManager.startLoginActivity(activity);
-            }
+    private void initMetrix() {
+        Matrix.Builder builder = new Matrix.Builder(this); // build matrix
+        builder.pluginListener(new TestPluginListener(this)); // add general pluginListener
+        DynamicConfigImpDemo dynamicConfig = new DynamicConfigImpDemo(); // dynamic config
+        // init plugin
+        IOCanaryPlugin ioCanaryPlugin = new IOCanaryPlugin(new IOConfig.Builder()
+                .dynamicConfig(dynamicConfig)
+                .build());
+        //add to matrix
+        builder.plugin(ioCanaryPlugin);
 
-            @Override
-            public void startShare() {
+        //init matrix
+        Matrix.init(builder.build());
 
-            }
-
-            @Override
-            public void startMemberPage(Activity activity, String s) {
-                Log.d("MgReadBasicSdk", "MgShellApplication =========== startMemberPage");
-                MiguModuleServiceManager.launchWebPage(activity, "https://www.baidu.com", false);
-                //MgReadBasicSdk.setSubscribeCallback(MgReadBasicSdk.MgSdkCallBackResult.MG_SDK_RESULT_SUCCESS);
-            }
-
-            @Override
-            public boolean isLogin() {
-                return false;
-            }
-        });
+        // start plugin
+        ioCanaryPlugin.start();
     }
 
     //一行代码切换网络框架

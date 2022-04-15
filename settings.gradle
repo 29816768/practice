@@ -13,3 +13,5 @@ rootProject.name = "MyDemo"
 include ':app'
 include ':ioc_annotation_lib'
 include ':startup'
+include ':eventbus_apt_annotation'
+include ':eventbus_annotation'

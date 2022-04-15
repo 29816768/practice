@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <ImageView
+    <com.wyq.mydemo.view.LargeImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"/>
+        android:layout_height="match_parent" />
 
     <TextView
         android:id="@+id/curTime"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+        android:visibility="gone"
         android:textSize="170sp"
         android:textColor="@color/white"
         android:text="23:23:59"
