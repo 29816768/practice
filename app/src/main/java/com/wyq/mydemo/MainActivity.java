@@ -26,6 +26,8 @@ import com.wyq.mydemo.activity.DrawableActivity;
 import com.wyq.mydemo.activity.TimeActivity;
 import com.wyq.mydemo.bean.ViewEvent;
 import com.wyq.mydemo.bean.WorkEvent;
+import com.wyq.mydemo.designMode.mq.LogTask;
+import com.wyq.mydemo.designMode.mq.TaskPriority;
 import com.wyq.mydemo.http.HttpCallback;
 import com.wyq.mydemo.http.HttpHelper;
 import com.wyq.mydemo.http.ResponseData;
@@ -143,16 +145,26 @@ public class MainActivity extends AppCompatActivity {
 
     @Click(R.id.bt_test4)
     private void show4() {
-        Toast.makeText(this, "show4 is run", Toast.LENGTH_SHORT).show();
+        new LogTask("LOW")
+                .setDuration(4000)
+                .setPriority(TaskPriority.LOW)
+                .enqueue();
     }
 
     @Click(R.id.bt_t3)
     private void show5() {
-        startActivity(new Intent(MainActivity.this, TimeActivity.class));
+        new LogTask("DEFAULT")
+                .setDuration(5000) //设置了时间，代表这个任务时间是确定的，如果不确定，则不用设置
+                .setPriority(TaskPriority.DEFAULT) //设置优先级，默认是DEFAULT
+                .enqueue(); //入队
     }
 
     @Click(R.id.bt_t4)
     private void show6() {
+        new LogTask("HIGH")
+                .setDuration(3000)
+                .setPriority(TaskPriority.HIGH)
+                .enqueue();
     }
 
     @Click(R.id.bt_t5)
